@@ -1,0 +1,436 @@
+City,Zipcode,Neighborhooods,Call Type Group
+San Francisco,94103,Mission Bay,Potentially Life-Threatening
+San Francisco,94134,Bayview Hunters Point,Fire
+San Francisco,94102,Tenderloin,Alarm
+San Francisco,94104,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94114,Mission,Potentially Life-Threatening
+San Francisco,94108,Chinatown,Potentially Life-Threatening
+San Francisco,94109,Japantown,Alarm
+San Francisco,94110,Castro/Upper Market,Alarm
+San Francisco,94124,Potrero Hill,Non Life-threatening
+San Francisco,94131,Glen Park,Non Life-threatening
+San Francisco,94112,West of Twin Peaks,Fire
+San Francisco,94116,Sunset/Parkside,Potentially Life-Threatening
+San Francisco,94114,Haight Ashbury,Non Life-threatening
+San Francisco,94115,Japantown,Non Life-threatening
+San Francisco,94107,South of Market,Fire
+San Francisco,94117,Western Addition,Fire
+San Francisco,94117,Golden Gate Park,Non Life-threatening
+San Francisco,94133,Russian Hill,Non Life-threatening
+San Francisco,94129,Presidio,Potentially Life-Threatening
+San Francisco,94116,Sunset/Parkside,Alarm
+San Francisco,94115,Lone Mountain/USF,Fire
+San Francisco,94102,Tenderloin,Potentially Life-Threatening
+San Francisco,94104,Financial District/South Beach,Alarm
+San Francisco,94108,Chinatown,Alarm
+San Francisco,94109,Japantown,Potentially Life-Threatening
+San Francisco,94110,Castro/Upper Market,Potentially Life-Threatening
+San Francisco,94103,Mission Bay,Alarm
+San Francisco,94134,McLaren Park,Alarm
+San Francisco,94121,Lincoln Park,Fire
+San Francisco,94132,Sunset/Parkside,Non Life-threatening
+San Francisco,94114,Castro/Upper Market,Alarm
+San Francisco,94110,Mission,Potentially Life-Threatening
+San Francisco,94121,Outer Richmond,Fire
+San Francisco,94102,South of Market,Alarm
+San Francisco,94110,Glen Park,Fire
+San Francisco,94111,Chinatown,Alarm
+San Francisco,94114,Hayes Valley,Fire
+San Francisco,94111,North Beach,Potentially Life-Threatening
+San Francisco,94107,Potrero Hill,Non Life-threatening
+San Francisco,94110,Potrero Hill,Fire
+San Francisco,94111,North Beach,Alarm
+San Francisco,94111,Chinatown,Potentially Life-Threatening
+San Francisco,94132,Oceanview/Merced/Ingleside,Non Life-threatening
+San Francisco,94114,Castro/Upper Market,Potentially Life-Threatening
+San Francisco,94110,Mission,Alarm
+San Francisco,94102,South of Market,Potentially Life-Threatening
+San Francisco,94114,Inner Sunset,Non Life-threatening
+San Francisco,94118,Golden Gate Park,Fire
+San Francisco,94118,Presidio Heights,Fire
+San Francisco,94112,Excelsior,Non Life-threatening
+San Francisco,94134,McLaren Park,Potentially Life-Threatening
+San Francisco,94158,Mission Bay,Potentially Life-Threatening
+San Francisco,94102,Hayes Valley,Potentially Life-Threatening
+San Francisco,94127,West of Twin Peaks,Alarm
+San Francisco,94132,Sunset/Parkside,Fire
+San Francisco,94121,Lincoln Park,Non Life-threatening
+San Francisco,94121,Outer Richmond,Non Life-threatening
+San Francisco,94103,Financial District/South Beach,Alarm
+San Francisco,94107,Potrero Hill,Fire
+San Francisco,94109,Tenderloin,Potentially Life-Threatening
+San Francisco,94114,Hayes Valley,Non Life-threatening
+San Francisco,94110,Glen Park,Non Life-threatening
+San Francisco,94110,Potrero Hill,Non Life-threatening
+San Francisco,94109,Tenderloin,Alarm
+San Francisco,94131,Inner Sunset,Non Life-threatening
+San Francisco,94118,Golden Gate Park,Non Life-threatening
+San Francisco,94131,Castro/Upper Market,Potentially Life-Threatening
+San Francisco,94103,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94132,Oceanview/Merced/Ingleside,Fire
+San Francisco,94112,Excelsior,Fire
+San Francisco,94127,West of Twin Peaks,Potentially Life-Threatening
+San Francisco,94118,Presidio,Alarm
+San Francisco,94118,Presidio Heights,Non Life-threatening
+San Francisco,94102,Hayes Valley,Alarm
+San Francisco,94158,Mission Bay,Alarm
+San Francisco,94124,Potrero Hill,Fire
+San Francisco,94134,Bayview Hunters Point,Non Life-threatening
+San Francisco,94114,Haight Ashbury,Fire
+San Francisco,94131,Glen Park,Fire
+San Francisco,94112,West of Twin Peaks,Non Life-threatening
+San Francisco,94133,Nob Hill,Alarm
+San Francisco,94122,Lone Mountain/USF,Potentially Life-Threatening
+San Francisco,94122,Outer Richmond,Non Life-threatening
+San Francisco,94122,Inner Sunset,Potentially Life-Threatening
+San Francisco,94118,Seacliff,Potentially Life-Threatening
+San Francisco,94115,Japantown,Fire
+San Francisco,94124,Portola,Alarm
+San Francisco,94107,South of Market,Non Life-threatening
+San Francisco,94117,Western Addition,Non Life-threatening
+San Francisco,94131,West of Twin Peaks,Potentially Life-Threatening
+San Francisco,94131,West of Twin Peaks,Alarm
+San Francisco,94124,Portola,Potentially Life-Threatening
+San Francisco,94133,Russian Hill,Fire
+San Francisco,94118,Seacliff,Alarm
+San Francisco,94122,Inner Richmond,Non Life-threatening
+San Francisco,94133,Nob Hill,Potentially Life-Threatening
+San Francisco,94122,Inner Sunset,Alarm
+San Francisco,94115,Lone Mountain/USF,Non Life-threatening
+San Francisco,94103,Hayes Valley,Fire
+San Francisco,94115,Pacific Heights,Non Life-threatening
+San Francisco,94134,Portola,Fire
+San Francisco,94114,Noe Valley,Potentially Life-Threatening
+San Francisco,94103,Castro/Upper Market,Alarm
+San Francisco,94102,Western Addition,Non Life-threatening
+San Francisco,94108,Financial District/South Beach,Non Life-threatening
+San Francisco,94116,Inner Sunset,Fire
+San Francisco,94122,Sunset/Parkside,Non Life-threatening
+San Francisco,94112,Bernal Heights,Non Life-threatening
+San Francisco,94118,Lone Mountain/USF,Potentially Life-Threatening
+San Francisco,94118,Outer Richmond,Non Life-threatening
+San Francisco,94109,Pacific Heights,Alarm
+San Francisco,94132,West of Twin Peaks,Fire
+San Francisco,94109,Nob Hill,Non Life-threatening
+San Francisco,94109,Pacific Heights,Potentially Life-Threatening
+San Francisco,94158,Potrero Hill,Non Life-threatening
+San Francisco,94121,Golden Gate Park,Non Life-threatening
+San Francisco,94103,South of Market,Non Life-threatening
+San Francisco,94102,Financial District/South Beach,Fire
+San Francisco,94118,Lone Mountain/USF,Alarm
+San Francisco,94114,Twin Peaks,Fire
+San Francisco,94118,Inner Richmond,Non Life-threatening
+San Francisco,94131,Twin Peaks,Non Life-threatening
+San Francisco,94103,Castro/Upper Market,Potentially Life-Threatening
+San Francisco,94114,Noe Valley,Alarm
+San Francisco,94124,Bernal Heights,Potentially Life-Threatening
+San Francisco,94132,Lakeshore,Fire
+San Francisco,94127,Oceanview/Merced/Ingleside,Potentially Life-Threatening
+San Francisco,94105,Financial District/South Beach,Fire
+San Francisco,94112,Oceanview/Merced/Ingleside,Non Life-threatening
+San Francisco,94112,McLaren Park,Alarm
+San Francisco,94102,Nob Hill,Fire
+San Francisco,94133,Chinatown,Fire
+San Francisco,94117,Hayes Valley,Potentially Life-Threatening
+San Francisco,94121,Seacliff,Potentially Life-Threatening
+San Francisco,94134,Visitacion Valley,Alarm
+San Francisco,94115,Presidio Heights,Potentially Life-Threatening
+San Francisco,94107,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94103,Mission,Potentially Life-Threatening
+San Francisco,94110,Noe Valley,Potentially Life-Threatening
+San Francisco,94109,Marina,Non Life-threatening
+San Francisco,94108,Nob Hill,Non Life-threatening
+San Francisco,94110,Noe Valley,Alarm
+San Francisco,94107,Financial District/South Beach,Alarm
+San Francisco,94103,Mission,Alarm
+San Francisco,94117,Castro/Upper Market,Fire
+San Francisco,94121,Seacliff,Alarm
+San Francisco,94134,Visitacion Valley,Potentially Life-Threatening
+San Francisco,94115,Presidio Heights,Alarm
+San Francisco,94111,Financial District/South Beach,Non Life-threatening
+San Francisco,94133,North Beach,Fire
+San Francisco,94117,Hayes Valley,Alarm
+San Francisco,94109,Western Addition,Fire
+San Francisco,94134,Excelsior,Non Life-threatening
+San Francisco,94130,Treasure Island,Fire
+San Francisco,94122,Golden Gate Park,Non Life-threatening
+San Francisco,94112,McLaren Park,Potentially Life-Threatening
+San Francisco,94103,Tenderloin,Non Life-threatening
+San Francisco,94102,Nob Hill,Non Life-threatening
+San Francisco,94107,Bayview Hunters Point,Alarm
+San Francisco,94112,Outer Mission,Alarm
+San Francisco,94112,Oceanview/Merced/Ingleside,Fire
+San Francisco,94123,Pacific Heights,Non Life-threatening
+San Francisco,94115,Western Addition,Potentially Life-Threatening
+San Francisco,94110,Bernal Heights,Potentially Life-Threatening
+San Francisco,,Excelsior,Potentially Life-Threatening
+San Francisco,94133,Chinatown,Non Life-threatening
+San Francisco,94117,Lone Mountain/USF,Alarm
+San Francisco,94117,Inner Sunset,Alarm
+San Francisco,94109,Marina,Fire
+San Francisco,94116,West of Twin Peaks,Alarm
+San Francisco,94117,Castro/Upper Market,Non Life-threatening
+San Francisco,94116,West of Twin Peaks,Potentially Life-Threatening
+San Francisco,94117,Lone Mountain/USF,Potentially Life-Threatening
+San Francisco,94117,Inner Sunset,Potentially Life-Threatening
+San Francisco,94108,Nob Hill,Fire
+San Francisco,94103,Potrero Hill,Non Life-threatening
+San Francisco,94109,Western Addition,Non Life-threatening
+San Francisco,94110,Bernal Heights,Alarm
+San Francisco,94133,North Beach,Non Life-threatening
+San Francisco,94111,Financial District/South Beach,Fire
+San Francisco,94122,Golden Gate Park,Fire
+San Francisco,94115,Western Addition,Alarm
+San Francisco,94134,Excelsior,Fire
+San Francisco,94130,Treasure Island,Non Life-threatening
+San Francisco,94112,Outer Mission,Potentially Life-Threatening
+San Francisco,94107,Bayview Hunters Point,Potentially Life-Threatening
+San Francisco,94103,Tenderloin,Fire
+San Francisco,94134,Portola,Non Life-threatening
+San Francisco,94115,Pacific Heights,Fire
+San Francisco,94117,Haight Ashbury,Potentially Life-Threatening
+San Francisco,94123,Marina,Alarm
+San Francisco,94103,Hayes Valley,Non Life-threatening
+San Francisco,94107,Mission Bay,Alarm
+San Francisco,94108,Financial District/South Beach,Fire
+San Francisco,94131,Noe Valley,Potentially Life-Threatening
+San Francisco,94109,Russian Hill,Alarm
+San Francisco,94102,Western Addition,Fire
+San Francisco,94112,Bernal Heights,Fire
+San Francisco,94118,Outer Richmond,Fire
+San Francisco,94116,Inner Sunset,Non Life-threatening
+San Francisco,94122,Sunset/Parkside,Fire
+San Francisco,94124,Bayview Hunters Point,Alarm
+San Francisco,94124,Bayview Hunters Point,Potentially Life-Threatening
+San Francisco,94132,West of Twin Peaks,Non Life-threatening
+San Francisco,94109,Nob Hill,Fire
+San Francisco,94103,South of Market,Fire
+San Francisco,94102,Financial District/South Beach,Non Life-threatening
+San Francisco,94123,Presidio,Non Life-threatening
+San Francisco,94121,Golden Gate Park,Fire
+San Francisco,94131,Noe Valley,Alarm
+San Francisco,94132,Lakeshore,Non Life-threatening
+San Francisco,94109,Russian Hill,Potentially Life-Threatening
+San Francisco,94131,Twin Peaks,Fire
+San Francisco,94107,Mission Bay,Potentially Life-Threatening
+San Francisco,94114,Twin Peaks,Non Life-threatening
+San Francisco,94118,Inner Richmond,Fire
+San Francisco,94105,Financial District/South Beach,Non Life-threatening
+San Francisco,94117,Haight Ashbury,Alarm
+San Francisco,94123,Marina,Potentially Life-Threatening
+San Francisco,94107,South of Market,Alarm
+San Francisco,94117,Western Addition,Alarm
+San Francisco,94129,Presidio,Fire
+San Francisco,94133,Nob Hill,Non Life-threatening
+San Francisco,94122,Outer Richmond,Alarm
+San Francisco,94115,Lone Mountain/USF,Potentially Life-Threatening
+San Francisco,94112,West of Twin Peaks,Alarm
+San Francisco,94102,Tenderloin,Fire
+San Francisco,94109,Japantown,Fire
+San Francisco,94134,Bayview Hunters Point,Alarm
+San Francisco,94103,Mission Bay,Fire
+San Francisco,94104,Financial District/South Beach,Fire
+San Francisco,94114,Mission,Fire
+San Francisco,94108,Chinatown,Fire
+San Francisco,94134,Bayview Hunters Point,Potentially Life-Threatening
+San Francisco,94112,West of Twin Peaks,Potentially Life-Threatening
+San Francisco,94116,Sunset/Parkside,Fire
+San Francisco,94122,Lone Mountain/USF,Non Life-threatening
+San Francisco,94122,Outer Richmond,Potentially Life-Threatening
+San Francisco,94115,Lone Mountain/USF,Alarm
+San Francisco,94122,Inner Sunset,Non Life-threatening
+San Francisco,94118,Seacliff,Non Life-threatening
+San Francisco,94107,South of Market,Potentially Life-Threatening
+San Francisco,94131,West of Twin Peaks,Non Life-threatening
+San Francisco,94117,Western Addition,Potentially Life-Threatening
+San Francisco,94110,Potrero Hill,Potentially Life-Threatening
+San Francisco,94114,Hayes Valley,Alarm
+San Francisco,94111,Chinatown,Fire
+San Francisco,94110,Glen Park,Alarm
+San Francisco,94121,Outer Richmond,Alarm
+San Francisco,94102,South of Market,Fire
+San Francisco,94107,Mission,Non Life-threatening
+San Francisco,94103,Financial District/South Beach,Non Life-threatening
+San Francisco,94114,Castro/Upper Market,Fire
+San Francisco,94131,Inner Sunset,Potentially Life-Threatening
+San Francisco,94118,Golden Gate Park,Potentially Life-Threatening
+San Francisco,94127,West of Twin Peaks,Non Life-threatening
+San Francisco,94118,Presidio Heights,Potentially Life-Threatening
+San Francisco,94121,Lincoln Park,Alarm
+San Francisco,94134,McLaren Park,Fire
+San Francisco,94102,Hayes Valley,Non Life-threatening
+San Francisco,94158,Mission Bay,Non Life-threatening
+San Francisco,94118,Presidio Heights,Alarm
+San Francisco,94121,Lincoln Park,Potentially Life-Threatening
+San Francisco,94131,Inner Sunset,Alarm
+San Francisco,94118,Golden Gate Park,Alarm
+San Francisco,94121,Outer Richmond,Potentially Life-Threatening
+San Francisco,94110,Mission,Fire
+San Francisco,94110,Glen Park,Potentially Life-Threatening
+San Francisco,94110,Potrero Hill,Alarm
+San Francisco,94114,Hayes Valley,Potentially Life-Threatening
+San Francisco,94109,Tenderloin,Non Life-threatening
+San Francisco,94111,North Beach,Fire
+San Francisco,94111,Chinatown,Non Life-threatening
+San Francisco,94107,Potrero Hill,Alarm
+San Francisco,94114,Inner Sunset,Potentially Life-Threatening
+San Francisco,94114,Castro/Upper Market,Non Life-threatening
+San Francisco,94132,Oceanview/Merced/Ingleside,Potentially Life-Threatening
+San Francisco,94102,South of Market,Non Life-threatening
+San Francisco,94103,Financial District/South Beach,Fire
+San Francisco,94112,Excelsior,Potentially Life-Threatening
+San Francisco,94127,West of Twin Peaks,Fire
+San Francisco,94132,Sunset/Parkside,Alarm
+San Francisco,94134,McLaren Park,Non Life-threatening
+San Francisco,94105,South of Market,Non Life-threatening
+San Francisco,94158,Mission Bay,Fire
+San Francisco,94102,Hayes Valley,Fire
+San Francisco,94132,Sunset/Parkside,Potentially Life-Threatening
+San Francisco,94112,Excelsior,Alarm
+San Francisco,94132,Oceanview/Merced/Ingleside,Alarm
+San Francisco,94110,Mission,Non Life-threatening
+San Francisco,94114,Inner Sunset,Alarm
+San Francisco,94111,North Beach,Non Life-threatening
+San Francisco,94109,Tenderloin,Fire
+San Francisco,94107,Potrero Hill,Potentially Life-Threatening
+San Francisco,94115,Japantown,Alarm
+San Francisco,94117,Golden Gate Park,Alarm
+San Francisco,94133,Russian Hill,Potentially Life-Threatening
+San Francisco,94131,Glen Park,Alarm
+San Francisco,94129,Presidio,Non Life-threatening
+San Francisco,94124,Potrero Hill,Alarm
+San Francisco,94102,Tenderloin,Non Life-threatening
+San Francisco,94110,Castro/Upper Market,Non Life-threatening
+San Francisco,94109,Japantown,Non Life-threatening
+San Francisco,94114,Mission,Non Life-threatening
+San Francisco,94108,Chinatown,Non Life-threatening
+San Francisco,94104,Financial District/South Beach,Non Life-threatening
+San Francisco,94124,Potrero Hill,Potentially Life-Threatening
+San Francisco,94103,Mission Bay,Non Life-threatening
+San Francisco,94114,Haight Ashbury,Potentially Life-Threatening
+San Francisco,94131,Glen Park,Potentially Life-Threatening
+San Francisco,94116,Sunset/Parkside,Non Life-threatening
+San Francisco,94122,Inner Sunset,Fire
+San Francisco,94117,Golden Gate Park,Potentially Life-Threatening
+San Francisco,94133,Russian Hill,Alarm
+San Francisco,94115,Japantown,Potentially Life-Threatening
+San Francisco,94131,West of Twin Peaks,Fire
+San Francisco,94109,Pacific Heights,Fire
+San Francisco,94132,West of Twin Peaks,Potentially Life-Threatening
+San Francisco,94124,Bayview Hunters Point,Non Life-threatening
+San Francisco,94102,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94123,Presidio,Potentially Life-Threatening
+San Francisco,94116,Inner Sunset,Alarm
+San Francisco,94107,Mission Bay,Non Life-threatening
+San Francisco,94114,Twin Peaks,Potentially Life-Threatening
+San Francisco,94132,Lakeshore,Potentially Life-Threatening
+San Francisco,94103,Castro/Upper Market,Fire
+San Francisco,94124,Bernal Heights,Fire
+San Francisco,94109,Russian Hill,Non Life-threatening
+San Francisco,94134,Portola,Alarm
+San Francisco,94105,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94123,Marina,Non Life-threatening
+San Francisco,94117,Haight Ashbury,Non Life-threatening
+San Francisco,94105,Financial District/South Beach,Alarm
+San Francisco,94103,Hayes Valley,Potentially Life-Threatening
+San Francisco,94134,Portola,Potentially Life-Threatening
+San Francisco,94132,Lakeshore,Alarm
+San Francisco,94131,Noe Valley,Non Life-threatening
+San Francisco,94114,Noe Valley,Fire
+San Francisco,94114,Twin Peaks,Alarm
+San Francisco,94118,Lone Mountain/USF,Fire
+San Francisco,94116,Inner Sunset,Potentially Life-Threatening
+San Francisco,94102,Financial District/South Beach,Alarm
+San Francisco,94123,Presidio,Alarm
+San Francisco,94132,West of Twin Peaks,Alarm
+San Francisco,94117,Lone Mountain/USF,Non Life-threatening
+San Francisco,94117,Inner Sunset,Non Life-threatening
+San Francisco,94117,Castro/Upper Market,Potentially Life-Threatening
+San Francisco,94116,West of Twin Peaks,Non Life-threatening
+San Francisco,94134,Visitacion Valley,Fire
+San Francisco,94109,Western Addition,Potentially Life-Threatening
+San Francisco,94133,Chinatown,Alarm
+San Francisco,94133,North Beach,Potentially Life-Threatening
+San Francisco,94130,Treasure Island,Potentially Life-Threatening
+San Francisco,94102,Nob Hill,Alarm
+San Francisco,94112,Outer Mission,Non Life-threatening
+San Francisco,94107,Bayview Hunters Point,Non Life-threatening
+San Francisco,94123,Pacific Heights,Alarm
+San Francisco,94123,Pacific Heights,Potentially Life-Threatening
+San Francisco,94102,Nob Hill,Potentially Life-Threatening
+San Francisco,94115,Western Addition,Non Life-threatening
+San Francisco,94130,Treasure Island,Alarm
+San Francisco,94117,Hayes Valley,Fire
+San Francisco,94110,Bernal Heights,Non Life-threatening
+San Francisco,94109,Western Addition,Alarm
+San Francisco,94133,North Beach,Alarm
+San Francisco,94133,Chinatown,Potentially Life-Threatening
+San Francisco,94115,Presidio Heights,Fire
+San Francisco,94121,Seacliff,Fire
+San Francisco,94107,Financial District/South Beach,Fire
+San Francisco,94103,Mission,Fire
+San Francisco,94117,Castro/Upper Market,Alarm
+San Francisco,94116,West of Twin Peaks,Fire
+San Francisco,94108,Nob Hill,Potentially Life-Threatening
+San Francisco,94109,Marina,Alarm
+San Francisco,94117,Lone Mountain/USF,Fire
+San Francisco,94134,Visitacion Valley,Non Life-threatening
+San Francisco,94111,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94122,Golden Gate Park,Potentially Life-Threatening
+San Francisco,94134,Excelsior,Potentially Life-Threatening
+San Francisco,94112,Outer Mission,Fire
+San Francisco,94112,Oceanview/Merced/Ingleside,Alarm
+San Francisco,94107,Bayview Hunters Point,Fire
+San Francisco,94112,McLaren Park,Non Life-threatening
+San Francisco,94103,Tenderloin,Potentially Life-Threatening
+San Francisco,94103,Tenderloin,Alarm
+San Francisco,94112,Oceanview/Merced/Ingleside,Potentially Life-Threatening
+San Francisco,94134,Excelsior,Alarm
+San Francisco,94115,Western Addition,Fire
+San Francisco,94122,Golden Gate Park,Alarm
+San Francisco,94121,Seacliff,Non Life-threatening
+San Francisco,94111,Financial District/South Beach,Alarm
+San Francisco,94115,Presidio Heights,Non Life-threatening
+San Francisco,94117,Hayes Valley,Non Life-threatening
+San Francisco,94110,Bernal Heights,Fire
+San Francisco,94108,Nob Hill,Alarm
+San Francisco,94109,Marina,Potentially Life-Threatening
+San Francisco,94107,Financial District/South Beach,Non Life-threatening
+San Francisco,94103,Mission,Non Life-threatening
+San Francisco,94110,Noe Valley,Non Life-threatening
+San Francisco,94124,Bayview Hunters Point,Fire
+San Francisco,94109,Nob Hill,Potentially Life-Threatening
+San Francisco,94109,Pacific Heights,Non Life-threatening
+San Francisco,94122,Sunset/Parkside,Alarm
+San Francisco,94112,Bernal Heights,Alarm
+San Francisco,94118,Outer Richmond,Alarm
+San Francisco,94121,Golden Gate Park,Potentially Life-Threatening
+San Francisco,94158,Potrero Hill,Potentially Life-Threatening
+San Francisco,94103,South of Market,Potentially Life-Threatening
+San Francisco,94103,Castro/Upper Market,Non Life-threatening
+San Francisco,94102,Western Addition,Alarm
+San Francisco,94124,Bernal Heights,Non Life-threatening
+San Francisco,94109,Russian Hill,Fire
+San Francisco,94118,Inner Richmond,Potentially Life-Threatening
+San Francisco,94108,Financial District/South Beach,Alarm
+San Francisco,94131,Twin Peaks,Potentially Life-Threatening
+San Francisco,94107,Mission Bay,Fire
+San Francisco,94115,Pacific Heights,Alarm
+San Francisco,94123,Marina,Fire
+San Francisco,94127,Oceanview/Merced/Ingleside,Non Life-threatening
+San Francisco,94115,Pacific Heights,Potentially Life-Threatening
+San Francisco,94117,Haight Ashbury,Fire
+San Francisco,94118,Inner Richmond,Alarm
+San Francisco,94104,Chinatown,Potentially Life-Threatening
+San Francisco,94108,Financial District/South Beach,Potentially Life-Threatening
+San Francisco,94131,Twin Peaks,Alarm
+San Francisco,94114,Noe Valley,Non Life-threatening
+San Francisco,94102,Western Addition,Potentially Life-Threatening
+San Francisco,94131,Noe Valley,Fire
+San Francisco,94158,Potrero Hill,Alarm
+San Francisco,94103,South of Market,Alarm
+San Francisco,94122,Sunset/Parkside,Potentially Life-Threatening
+San Francisco,94118,Lone Mountain/USF,Non Life-threatening
+San Francisco,94112,Bernal Heights,Potentially Life-Threatening
+San Francisco,94118,Outer Richmond,Potentially Life-Threatening
+San Francisco,94109,Nob Hill,Alarm

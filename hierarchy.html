@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Visualization</title>
+
+  <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+  <!-- https://bulma.io/ -->
+  <!-- <link rel="stylesheet" href=https://jenil.github.io/bulmaswatch/pulse/bulmaswatch.min.css> -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href=https://jenil.github.io/bulmaswatch/solar/bulmaswatch.min.css>
+
+  <!-- Load Font Awesome 5 (free) icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+  <script src="hierarchy.js"></script>
+  <script src="pack.js"></script>
+  <script src="treemap.js"></script>
+</head>
+
+<body>
+
+  <!-- Page header -->
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Visualization</h1>
+        <h2 class="subtitle">SFFD hierarchy</h2>
+      </div>
+    </div>
+  </section>
+  <!-- End page header -->
+
+  <!-- Page navigation -->
+  <div class="tabs is-boxed is-centered is-medium">
+  <ul>
+    <li>
+      <a class="navbar-item" href="index.html">
+        <span class="icon"><i class="fas fa-home"></i></span>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a class="navbar-item" href="dataSet.html" title="Data Set">
+        <span class="icon"><i class="fas fa-table"></i></span>
+        <span>Data</span>
+      </a>
+    </li>
+    <li class="is-active">
+      <a class="navbar-item" href="hierarchy.html">
+        <span class="icon"><i class="fas fa-sitemap"></i></span>
+        <span>Hierarchy</span>
+      </a>
+    </li>
+    <li>
+      <a class="navbar-item" href="about.html" title="About">
+        <span class="icon"><i class="fas fa-user-secret"></i></span>
+        <span>About</span>
+      </a>
+    </li>
+  </ul>
+  </div>
+<!-- End page navigation -->
+
+<section class="section">
+  <div class="container">
+    <!-- Begin page content -->
+    <div class="content">
+
+      <h2 id="Hierarchy">Hierarchy</h2>
+
+
+
+      <h3>Circular Dendogram with Curved Edges</h3>
+      <div class="hierarchy">
+        <script type="text/javascript">
+          d3.csv("fd2020.csv").then(drawChart);
+        </script>
+        <svg id="area">
+          <g id="details" pointer-events="none"></g>
+        </svg>
+      </div>
+      <br>
+      <h3>Tree Map</h3>
+      <div class="willow">
+        <script type="text/javascript">
+          d3.csv("fd2020.csv").then(treemap);
+        </script>
+        <svg id="tree"></svg>
+      </div>
+
+
+
+      <h3>Encoding</h3>
+      <h4>Dendogram</h4>
+        <p>The encoding for the dendogram has different colored circles at different layers representing a level in the hierarchy, the middle
+        layer with the singular circle is the root, representing San Francisco, each subsequent layer is a level of hierarchy, represented by
+        Battalion and Station Area. Each one of these has a count of calls made to the fire department.</p>
+      <h4>TreeMap</h4>
+      <p>the tree map is a packed representation of the hierarchy dataset, each layer is represented by color and size, the biggest rectangle represents
+      the root, San Francisco, and has all accumulated cases for the city. The next layer is the Batallions, represented by size according to their
+      sub division of</p>
+
+
+
+      <h3>Interactivity</h3>
+        <p>Interactivity was done by brushing all nodes of the same type. On the lowest or outermost level, some nodes from different
+        parents are repeated (though the counts are unique per their parent node), and all of these are highlighted together, while the rest are made opaque.
+        The Circular Dendogram with Curved Edges and the TreeMap both share the same data and the same brushing. though it appears differently for each visualization.
+        <br>
+        The circular dendongram highlights an individual circle or node, while making the rest opaque.
+        The treemap highlights a rectangle and makes the rest opaque.<br>
+      Both the Dendogram and the TreeMap also have a tooltip which which show the name of the current circle or ractangle that we are hovering over, and the
+      amount if cases associated with it.</p>
+
+      <h3>Conclusions</h3>
+        <p>Although there is meant to be a hierarchy for Stations and Batallions, oocasionally within the data set they overlap,
+        an interesting question would be if this is a mistake in data entry, or if there is collaboration between the batallions where a station is put
+        under the command of another battalion when attending the same incident, in the case that more than one station is needed.</p>
+
+
+
+      </div>
+              <!-- End page content -->
+    </div>
+</section>
+
+          <!-- Page footer -->
+          <!-- https://bulma.io/documentation/layout/footer/ -->
+          <footer class="footer">
+            <div class="content has-text-centered is-size-7">
+              <p>
+                <a href="#top">
+                  <span class="fas fa-arrow-up"></span>
+                  <span class="has-text-weight-medium">Back to Top</span>
+                </a>
+              </p>
+
+              <p>
+                <!-- TODO: Change to link to your Github repository -->
+                <a href="https://github.com/usf-cs360-spring2020/project-etbascur" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                  <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
+                </a>
+
+                <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                  <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
+                </a>
+
+                <a href="https://bulma.io" class="button is-small">
+                  <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                </a>
+              </p>
+            </div>
+          </footer>
+          <!-- End page footer -->
+
+          <!-- Mobile menu responsiveness -->
+          <!-- https://bulma.io/documentation/components/navbar/ -->
+          <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+              $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+                  const target = el.dataset.target;
+                  const $target = document.getElementById(target);
+                  el.classList.toggle('is-active');
+                  $target.classList.toggle('is-active');
+                });
+              });
+            }
+          });
+          </script>
+          <!-- End mobile menu responsiveness -->
+        </body>
+
+        </html>

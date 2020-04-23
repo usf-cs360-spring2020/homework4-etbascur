@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Set</title>
+
+  <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+  <!-- https://bulma.io/ -->
+  <!-- <link rel="stylesheet" href=https://jenil.github.io/bulmaswatch/pulse/bulmaswatch.min.css> -->
+  <link href="data.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href=https://jenil.github.io/bulmaswatch/solar/bulmaswatch.min.css>
+
+  <!-- Load Font Awesome 5 (free) icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <!-- Page header -->
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Data Set</h1>
+        <h2 class="subtitle">SFFD Hierarchy</h2>
+      </div>
+    </div>
+  </section>
+  <!-- End page header -->
+
+  <!-- Page navigation -->
+  <div class="tabs is-boxed is-centered is-medium">
+  <ul>
+    <li>
+      <a class="navbar-item" href="index.html">
+        <span class="icon"><i class="fas fa-home"></i></span>
+        <span>Home</span>
+      </a>
+    </li>
+    <li class="is-active">
+      <a class="navbar-item" href="dataSet.html" title="Data Set">
+        <span class="icon"><i class="fas fa-table"></i></span>
+        <span>Data</span>
+      </a>
+    </li>
+    <li>
+      <a class="navbar-item" href="hierarchy.html">
+        <span class="icon"><i class="fas fa-sitemap"></i></span>
+        <span>Hierarchy</span>
+      </a>
+    </li>
+    <li>
+      <a class="navbar-item" href="about.html" title="About">
+        <span class="icon"><i class="fas fa-user-secret"></i></span>
+        <span>About</span>
+      </a>
+    </li>
+  </ul>
+  </div>
+<!-- End page navigation -->
+
+<section class="section">
+  <div class="container">
+    <!-- Begin page content -->
+    <div class="content">
+
+      <h2 id="data">Data</h2>
+
+      <p>The data set was taken from <a href="https://data.sfgov.org/Public-Safety/Fire-Department-Calls-for-Service/nuek-vuh3"> DataSF Fire Department Calls for Service</a>. The data was exported from the
+        website on <span class="blinking"> ADD DATE</span>.
+      The data set has
+      <ul style="list-style-type:square;">
+        <li>5.26M Rows</li>
+        <li>34 Columns</li>
+        <li>Each row is a response</li>
+      </ul>
+        The data gets published daily, and changes daily. <br>
+      </p>
+
+      <h3>About the data</h3>
+      <blockquote>
+        <p>
+          Fire Calls-For-Service includes all fire units responses to calls. Each record includes the call number, incident number,
+           address, unit identifier, call type, and disposition. All relevant time intervals are also included. Because this
+           dataset is based on responses, and since most calls involved multiple units, there are multiple records for each call
+           number. Addresses are associated with a block number, intersection or call box, not a specific address.
+        </p>
+      </blockquote>
+
+      <h3>License</h3>
+
+      <blockquote>
+        <p>
+          This data is made available under the	Open Data Commons Public Domain Dedication and License.
+        </p>
+        </blockquote>
+
+
+          <h3 id="wrangling">Wrangling</h3>
+
+          <p>
+            Since this is a very large dataset, the first thing I did was to reduce it. From the SFData website I used their filtering tool to
+            get only the cases for the year 2020. Then I filtered so that the only City showing was San Francisco, so as to use it as a root node for my hierarchy later.
+            I then exported the data as a csv file.
+           Initially this data set is not hierarchical, the data set first needed to be made hierarchical by nesting different columns.
+          To do this I used the d3.nest() function which allowed me to create a hierarchy by placing one column as a key to another, for the
+          root, I used the Cities column since there was only one city in there, San Francisco. I then placed the <i>Battalion</i> and the <i>Station</i> columns nested under these.
+          Finally to get the count of the cases for each level, I rolled up the data using .rollup. All of this was saved in a newly named data set <i>h_data</i> and place in the
+          d3.hierarchy() function with the city as it's root.</p>
+
+            <h3 id="columns_used">Columns</h3>
+            <p>These are all the available columns from the data dictionary, the columns used <b>City, Battalion and station</b>,
+            are higlighted below.</p>
+
+                <div id="Fire-dictionary_19608" align=center x:publishsource="Excel"><span
+                style='font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+                text-align:start;widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;
+                text-decoration-color: initial'>
+
+                <table class="table is-bordered is-striped is-hoverable" border=0 cellpadding=0 cellspacing=0 width=727 style='border-collapse:
+                 collapse;table-layout:fixed;width:545pt'>
+                 <col width=221 style='mso-width-source:userset;mso-width-alt:7850;width:166pt'>
+                 <col width=142 style='mso-width-source:userset;mso-width-alt:5034;width:106pt'>
+                 <col width=364 style='mso-width-source:userset;mso-width-alt:12942;width:273pt'>
+                 <tr height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6519608 width=221 style='height:14.4pt;width:166pt'>Field
+                  Name</span></td>
+                  <td class=xl6519608 width=142 style='border-left:none;width:106pt'>Data Type</td>
+                  <td class=xl6519608 width=364 style='border-left:none;width:273pt'>Definition</td>
+                 </tr>
+                 <tr height=58 style='height:43.2pt'>
+                  <td height=58 class=xl6619608 style='height:43.2pt;border-top:none'>Call
+                  Number</td>
+                  <td class=xl6719608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>A unique 9-digit number assigned by the 911 Dispatch Center
+                  (DEM) to this call. These number are used for both Police and Fire calls.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Unit ID</td>
+                  <td class=xl6719608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Unit Identifier. For example E01 for Engine 1 or T01 for Truck
+                  1.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Incident
+                  Number</td>
+                  <td class=xl6719608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>A unique 8-digit number assigned by DEM to this Fire incident.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Call Date</td>
+                  <td class=xl6719608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date the call is received at the 911 Dispatch Center. Used for
+                  reporting purposes.</td>
+                 </tr>
+                 <tr height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6619608 style='height:14.4pt;border-top:none'>Call Type</td>
+                  <td class=xl6719608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Type of call the incident falls into. See the list below.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Watch
+                  Date</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Watch date when the call is received. Watch date starts at 0800
+                  each morning and ends at 0800 the next day.</td>
+                 </tr>
+                 <tr height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6619608 style='height:14.4pt;border-top:none'>Received
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date and time of call is received at the 911 Dispatch Center.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Entry
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date and time the 911 operator submits the entry of the initical
+                  call information into the CAD system</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Dispatch
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date and time the 911 operator dispatches this unit to the call.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Response
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date and time this unit acknowledges the dispatch and records
+                  that the unit is en route to the location of the call.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>On Scene
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date and time the unit records arriving to the location of the
+                  incident</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>AVL
+                  Validated On Scene DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Updated date and time the unit arrived on scene based on
+                  existing unit AVL coordinates.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Transport
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>If this unit is an ambulance, date and time the unit begins the
+                  transport unit arrives to hospital</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Hospital
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>If this unit is an ambulance, date and time the unit arrives to
+                  the hospital.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Call
+                  Final Disposition</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Disposition of the call (Code). For example TH2: Transport to
+                  Hospital - Code 2, FIR: Resolved by Fire Department</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Available
+                  DtTm</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Date &amp; Time</td>
+                  <td class=xl6819608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Date and time this unit is not longer assigned to this call and
+                  it is available for another dispatch.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Address</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Address of midblock point associated with incident (obfuscated
+                  address to protect caller privacy)</td>
+                 </tr>
+                 <tr class="is-selected" height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6619608 style='height:14.4pt;border-top:none'>City</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>City of incident</td>
+                 </tr>
+                 <tr height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6619608 style='height:14.4pt;border-top:none'>Zipcode
+                  of Incident</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Zipcode of incident</td>
+                 </tr>
+                 <tr class="is-selected" height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Battalion</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Emergency Response District (There are 9 Fire Emergency Response
+                  Districts)</td>
+                 </tr>
+                 <tr class="is-selected" height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Station
+                  Area</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Fire Station First Response Area associated with the address of
+                  the incident</td>
+                 </tr>
+                 <tr height=77 style='height:57.6pt'>
+                  <td height=77 class=xl6619608 style='height:57.6pt;border-top:none'>Box</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Fire box associated with the address of the incident. A box is
+                  the smallest area used to divide the City. Each box is associated with a
+                  unique unit dispatch order. The City is divided into more than 2,400 boxes.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Original
+                  Priority</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Initial call priority (Code 2: Non-Emergency or Code
+                  3:Emergency).</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Priority</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Call priority (Code 2: Non-Emergency or Code 3:Emergency).</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Final
+                  Priority</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Final call priority (Code 2: Non-Emergency or Code 3:Emergency).</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>ALS Unit</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Boolean
+                  (True/False)</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Does this unit includes ALS (Advance Life Support) resources? Is
+                  there a paramedic in this unit?</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Call Type
+                  Group</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Call types are divided into four main groups: Fire, Alarm,
+                  Potential Life Threatening and Non Life Threatening.</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Number of
+                  Alarms</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Numeric</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Number of alarms associated with the incident. This is a number
+                  between 1 and 5.</td>
+                 </tr>
+                 <tr height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6619608 style='height:14.4pt;border-top:none'>Unit Type</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Unit type</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Unit
+                  sequence in call dispatch</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Numeric</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>A number that indicates the order this unit was assigned to this
+                  call</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Location</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Coordinates</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Latitude and longitude of address obfuscated either to the
+                  midblock, intersection or call box</td>
+                 </tr>
+                 <tr height=38 style='height:28.8pt'>
+                  <td height=38 class=xl6619608 style='height:28.8pt;border-top:none'>Fire
+                  Prevention District</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Bureau of Fire Prevention District associated with this address</td>
+                 </tr>
+                 <tr height=19 style='height:14.4pt'>
+                  <td height=19 class=xl6619608 style='height:14.4pt;border-top:none'>Supervisor
+                  District</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Supervisor District associated with this address</td>
+                 </tr>
+                 <tr height=58 style='height:43.2pt'>
+                  <td height=58 class=xl6619608 style='height:43.2pt;border-top:none'>Neighborhood
+                  District</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Neighborhood District associated with this address, boundaries
+                  available here: https://data.sfgov.org/d/p5b7-5n3h</td>
+                 </tr>
+                 <tr height=58 style='height:43.2pt'>
+                  <td height=58 class=xl6619608 style='height:43.2pt;border-top:none'>RowID</td>
+                  <td class=xl6619608 style='border-top:none;border-left:none'>Text</td>
+                  <td class=xl6919608 width=364 style='border-top:none;border-left:none;
+                  width:273pt'>Unique identifier used for managing data updates. It is the
+                  concatenation of Call Number and Unit ID separated by a dash</td>
+                 </tr>
+                 <![if supportMisalignedColumns]>
+                 <tr height=0 style='display:none'>
+                  <td width=221 style='width:166pt'></td>
+                  <td width=142 style='width:106pt'></td>
+                  <td width=364 style='width:273pt'></td>
+                 </tr>
+                 <![endif]>
+                </table>
+
+                </div>
+
+               </div>
+
+
+
+              </div>
+              <!-- End page content -->
+            </div>
+          </section>
+
+          <!-- Page footer -->
+          <!-- https://bulma.io/documentation/layout/footer/ -->
+          <footer class="footer">
+            <div class="content has-text-centered is-size-7">
+              <p>
+                <a href="#top">
+                  <span class="fas fa-arrow-up"></span>
+                  <span class="has-text-weight-medium">Back to Top</span>
+                </a>
+              </p>
+
+              <p>
+                <!-- TODO: Change to link to your Github repository -->
+                <a href="https://github.com/usf-cs360-spring2020/project-etbascur" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                  <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
+                </a>
+
+                <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                  <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
+                </a>
+
+                <a href="https://bulma.io" class="button is-small">
+                  <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                </a>
+              </p>
+            </div>
+          </footer>
+          <!-- End page footer -->
+
+          <!-- Mobile menu responsiveness -->
+          <!-- https://bulma.io/documentation/components/navbar/ -->
+          <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+              $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+                  const target = el.dataset.target;
+                  const $target = document.getElementById(target);
+                  el.classList.toggle('is-active');
+                  $target.classList.toggle('is-active');
+                });
+              });
+            }
+          });
+          </script>
+          <!-- End mobile menu responsiveness -->
+        </body>
+
+        </html>
