@@ -19,14 +19,14 @@ function drawChart(data){
     })
     .entries(data);
 
-  console.log("nested_data", nested_data);
+  //console.log("nested_data", nested_data);
 
   let h_data = d3.hierarchy(nested_data[0], function(d) {
     //console.log("values", d.values);
     return d.values;
   });
   root= nested_data[0];
-  console.log("root", root);
+//  console.log("root", root);
 
   h_data.count()
   h_data.sum(row => row.value)
@@ -74,7 +74,8 @@ function drawChart(data){
     .attr("id", "legendOrdinal")
     .attr("transform", translate(width - 150,height/8));
 
-    legend(legPlot.append("g"), h_data.descendants());
+    legend(svg);
+    console.log("descend",h_data.descendants());
 
 
 
@@ -124,7 +125,7 @@ function setupEvents(g, selection, raise) {
   // show tooltip text on mouseover (hover)
   selection.on('mouseover.tooltip', function(d) {
     showTooltip(g, d3.select(this));
-    console.log(d);
+    //console.log(d);
     selection.filter(e => (d.data.key !== e.data.key)).transition().style("opacity", 0.1);
 
 
@@ -158,7 +159,7 @@ function showTooltip(g, node) {
   let name = datum.data.key;
 
   // create tooltip
-  console.log("datum", datum);
+//   console.log("datum", datum);
   numberFormat = d3.format(".2~s");
   text = `${name} (${numberFormat(datum.value)} cases)`;
 
@@ -194,25 +195,12 @@ function showTooltip(g, node) {
   }
 }
 
-  function legend(g, node){
-    let col2data = node.map(function(d) { return d.type });
-    let ordinal = d3.scaleOrdinal()
-    .domain(col2data)
-    .range(["#A2D4AB","#3EACA8","#5A5050"]);
-
-  let legendOrdinal = d3.legendColor()
-  .shape("path", d3.symbol().type(d3.symbolCircle).size(70)())
-  .scale(ordinal)
-  .on("cellover", function(d) {
-      console.log(d);
-      node.filter(e => (d !== e.type)).transition().attr("visibility", "hidden");
-      })
-
-  .on("cellout", function(d) {
-       node.transition().attr("visibility", "visible");
-     });
-
-
-  g.select(".legendOrdinal")
-  .call(legendOrdinal);
+  function legend(svg){
+    // Handmade legend
+    svg.append("circle").attr("cx",830).attr("cy",130).attr("r", 6).style("fill","rgb(240, 249, 33)").style("stroke", "silver")
+    svg.append("circle").attr("cx",830).attr("cy",160).attr("r", 6).style("fill", "rgb(204, 71, 120)").style("stroke", "silver")
+    svg.append("circle").attr("cx",830).attr("cy",190).attr("r", 6).style("fill", "rgb(13, 8, 135)").style("stroke", "silver")
+    svg.append("text").attr("x", 850).attr("y", 130).text("City").style("font-size", "15px").style("fill", "#75888a").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 850).attr("y", 160).text("Battalion").style("font-size", "15px").style("fill", "#75888a").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 850).attr("y", 190).text("Staion Number").style("font-size", "15px").style("fill", "#75888a").attr("alignment-baseline","middle")
   }

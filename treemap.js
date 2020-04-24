@@ -30,7 +30,7 @@ function treemap(data) {
   diameter = Math.min(width, height);
   pad =14;
   r = 5;
-  color = d3.scaleSequential([3, 0], d3.interpolatePlasma);
+  color = d3.scaleSequential([h_data.height, 0], d3.interpolatePlasma)
 
 
   // sort largest nodes first
@@ -42,7 +42,7 @@ function treemap(data) {
   h_data.sum(d => d.value);
 
   // layout based on width, height minus some padding
-  let layout = d3.treemap().padding(r).size([width - 2 * pad, height - 2 * pad]);
+  let layout = d3.treemap().padding(r).size([(width/2 - pad) + 200, height - 2 * pad]);
 
   layout(h_data);
 
@@ -67,5 +67,7 @@ function treemap(data) {
     .style("fill", function(d) {return color(d.depth)});
 
   setupEvents(plot, rects, false);
+
+  legend(svg);
 
 }
